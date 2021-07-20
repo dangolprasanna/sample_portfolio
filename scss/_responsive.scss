@@ -1,0 +1,123 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+    .nav {
+        visibility: visible;
+        .menu-nav {
+            transform: translateY(0%);
+            background: transparent;
+            display: block;
+            height: 100%;
+            text-align: right;
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+            &_links {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .home {
+        background-position: center -200px;
+        font-size: 1.5rem;
+        .social-icons {
+            flex-direction: row;
+            font-size: 1rem;
+        }
+    }
+    .about {
+        .about__bio-image {
+            height: 100vh;
+            background-position-y: -200px;
+            .about__bio {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .projects {
+        &__bio-image {
+            height: 40vh;
+            background-position-y: -250px;
+        }
+        &__items {
+            grid-template-columns: repeat(2, 50%);
+            width: 80vw;
+        }
+        .text-secondary {
+            font-size: 3rem;
+        }
+    }
+    .contact {
+        .contact__list {
+            grid-template-columns: repeat(2, 1fr);
+            // font-size: 2rem;
+        }
+    }
+}
+
+@include media-xs {
+    .cursor {
+        display: none;
+    }
+    .about {
+        &__bio-image {
+            height: 60vh;
+        }
+        &__bio {
+            font-size: 1.05rem;
+        }
+    }
+    .contact {
+        background-position: center center;
+        padding-top: 20vh;
+    }
+    .home {
+        &__name {
+            font-size: 4rem;
+        }
+    }
+}
+
+@include media-lg {
+    .contact {
+        background-position: center -100px;
+        .contact__list {
+            margin-top: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 1.8rem;
+        }
+        .social-icons {
+            font-size: 1.3rem;
+            flex-direction: row;
+        }
+    }
+    .nav {
+        font-size: 4rem;
+    }
+    .projects {
+        &__bio-image {
+            height: 70vh;
+        }
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .about {
+        .about__bio-image {
+            height: 70vh;
+            .about__bio {
+                font-size: 1.5rem;
+            }
+        }
+        .jobs {
+            font-size: 1.5rem;
+        }
+    }
+    .home {
+        &__name {
+            font-size: 6rem;
+        }
+    }
+}
